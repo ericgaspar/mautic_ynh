@@ -102,6 +102,33 @@ chown -R $app: $final_path
 chmod -R 755 $final_path
 
 #=================================================
+# SETUP APPLICATION WITH CURL
+#=================================================
+
+# Set the app as temporarily public for cURL call
+ynh_permission_update --permission "main" --add "visitors"
+
+# Reload NGINX
+ynh_systemd_action --service_name=nginx --action=reload
+
+ynh_script_progression --message="Finalizing installation..." --weight=10
+
+# Installation with cURL
+installUrl="//index.php/installer"
+
+ynh_local_curl $installUrl 
+ynh_local_curl $installUrl/step/1 "install_doctrine_step_host=localhost" "install_doctrine_step_name=$db_user" "install_doctrine_step_password=$db_pwd" "install_doctrine_step_user=$db_name"
+
+# Remove the `admin/` directory from within the MantisBT installation path.
+# The scripts within this directory should not be accessible on a live MantisBT site
+# or on any installation that is accessible via the Internet.
+ynh_secure_remove "$final_path/admin"
+
+# Set the user chosen at installation as administrator
+ynh_mysql_connect_as --user="$db_user" --password="$db_pwd" --database="$db_name" <<< "UPDATE ${db_name}_user_table SET username = '$admin' WHERE id = 1;"
+
+
+#=================================================
 # SETUP SSOWAT
 #=================================================
 ynh_script_progression --message="Configuring SSOwat..." --weight=10
@@ -118,6 +145,27 @@ fi
 ynh_script_progression --message="Reloading NGINX web server..." --weight=1
 
 ynh_systemd_action --service_name=nginx --action=reload
+
+
+#=================================================
+# SEND A README FOR THE ADMIN
+#=================================================
+ynh_script_progression --message="Sending a readme for the admin..."
+
+message="Matomo was successfully installed :)
+
+Please open your $app domain: https://$domain$path_url
+
+Complete the registration process from the setup page displayed.
+Details for MySQL database to be enterted while registration process:
+
+Database login:    $app
+Database name:     $app
+Database password: $db_pwd
+
+If you are facing any problem or want to improve this app, please open a new issue here: https://github.com/YunoHost-Apps/matomo_ynh/issues"
+
+ynh_send_readme_to_admin "$message"
 
 #=================================================
 # END OF SCRIPT
