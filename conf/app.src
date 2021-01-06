@@ -1,5 +1,5 @@
-SOURCE_URL=https://code.podlibre.org/podlibre/castopod/uploads/cdf2017e96987c41e0a982aa40f0d1da/castopod-1.0.0-alpha.31.zip
-SOURCE_SUM=288c3a8391b739190df4b29d169b1ea76aafbe642fac0ee126af15ff654ed13d
+SOURCE_URL=https://github.com/mautic/mautic/releases/download/3.2.2/3.2.2.zip
+SOURCE_SUM=ccca797b3eb4ac574d0517644f7e265a7faae4868c0678f4843c013b623cf286
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
