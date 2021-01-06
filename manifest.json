@@ -18,7 +18,7 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx"
+        "nginx",
         "mysql"
     ],
     "arguments": {
