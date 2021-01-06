@@ -64,7 +64,7 @@ ynh_script_progression --message="Setting up source files..." --weight=2
 ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 #ynh_setup_source --dest_dir="$final_path"
-unzip https://github.com/mautic/mautic/releases/download/3.2.2/3.2.2.zip -d $final_path
+cp ../sources $final_path
 
 #=================================================
 # NGINX CONFIGURATION
