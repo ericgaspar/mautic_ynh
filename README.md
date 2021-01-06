@@ -15,11 +15,11 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Screenshots
 
-![](https://podlibre.org/content/images/2020/12/Parisian-Podcast.png)
+![]()
 
 ## Demo
 
- * [podcast.podlibre.org](https://podcast.podlibre.org/@podlibre_fr)
+ * [Demo]()
 
 ## Configuration
 
@@ -28,7 +28,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Documentation
 
- * Documentation: https://podlibre.org/create-a-podcast-in-3mn-with-mautic/
+ * Documentation: 
  * YunoHost documentation: If specific documentation is needed, feel free to contribute.
 
 ## YunoHost specific features
