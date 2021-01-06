@@ -101,6 +101,18 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 chown -R $app: $final_path
 chmod -R 775 $final_path
 
+#=================================================
+# SETUP A CRON
+#=================================================
+ynh_script_progression --message="Setuping a cron..."
+
+cp ../conf/cron /etc/cron.d/$app
+
+ynh_replace_string --match_string="__FINALPATH__" --replace_string="$final_path" --target_file="/etc/cron.d/$app"
+ynh_replace_string --match_string="__PHPVERSION__" --replace_string="$phpversion" --target_file="/etc/cron.d/$app"
+
+chmod 644 "/etc/cron.d/$app"
+
 # #=================================================
 # # SETUP APPLICATION WITH CURL
 # #=================================================
@@ -143,7 +155,7 @@ ynh_systemd_action --service_name=nginx --action=reload
 #=================================================
 ynh_script_progression --message="Sending a readme for the admin..."
 
-message="Matomo was successfully installed :)
+message="Mautic was successfully installed :)
 
 Please open your $app domain: https://$domain$path_url
 

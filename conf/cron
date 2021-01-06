@@ -1,0 +1,8 @@
+Updating Contact Segments
+/usr/bin/php__PHPVERSION__ __FINALPATH__/app/console mautic:segments:update
+
+Updating Campaigns
+/usr/bin/php__PHPVERSION__ __FINALPATH__/app/console mautic:campaigns:rebuild
+
+Sending Email
+/usr/bin/php__PHPVERSION__ __FINALPATH__/app/console mautic:emails:send
