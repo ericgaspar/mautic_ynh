@@ -11,7 +11,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 
 
-**Shipped version:** 1.0.0 alpha.31
+**Shipped version:** 3.2.2
 
 ## Screenshots
 

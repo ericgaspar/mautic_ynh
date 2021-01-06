@@ -6,7 +6,7 @@
         "en": "",
         "fr": ""
     },
-    "version": "1.0.0~ynh1",
+    "version": "3.2.2~ynh1",
     "url": "https://www.mautic.org/",
     "license": "GPL-3.0-only",
     "maintainer": {
@@ -19,6 +19,7 @@
     "multi_instance": true,
     "services": [
         "nginx",
+        "php7.3-fpm",
         "mysql"
     ],
     "arguments": {

@@ -126,7 +126,7 @@ ynh_script_progression --message="Installing with Composer..." --weight=30
 #=================================================
 
 # Recalculate and store the config file checksum into the app settings
-ynh_store_file_checksum --file="$final_path/.env"
+#ynh_store_file_checksum --file="$final_path/.env"
 
 #=================================================
 # GENERIC FINALIZATION
