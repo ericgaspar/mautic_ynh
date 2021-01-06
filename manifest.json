@@ -1,13 +1,13 @@
 {
-    "name": "Castopod",
-    "id": "castopod",
+    "name": "Mautic",
+    "id": "mautic",
     "packaging_format": 1,
     "description": {
-        "en": "Hosting platform made for podcasters",
-        "fr": "Plateforme d'hébergement conçue pour les podcasteurs"
+        "en": "",
+        "fr": ""
     },
     "version": "1.0.0~ynh1",
-    "url": "https://podlibre.org/",
+    "url": "https://www.mautic.org/",
     "license": "GPL-3.0-only",
     "maintainer": {
         "name": "",
@@ -18,8 +18,7 @@
     },
     "multi_instance": true,
     "services": [
-        "nginx",
-        "php7.3-fpm",
+        "nginx"
         "mysql"
     ],
     "arguments": {
@@ -28,8 +27,8 @@
                 "name": "domain",
                 "type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for Castopod",
-                    "fr": "Choisissez un nom de domaine pour Castopod"
+                    "en": "Choose a domain name for mautic",
+                    "fr": "Choisissez un nom de domaine pour mautic"
                 },
                 "example": "example.com"
             },
@@ -37,8 +36,8 @@
                 "name": "path",
                 "type": "path",
                 "ask": {
-                    "en": "Choose a path for Castopod",
-                    "fr": "Choisissez un chemin pour Castopod"
+                    "en": "Choose a path for mautic",
+                    "fr": "Choisissez un chemin pour mautic"
                 },
                 "example": "/",
                 "default": "/"
@@ -51,8 +50,8 @@
                     "fr": "Est-ce une application publique ?"
                 },
                 "help": {
-                    "en": "If enabled, Castopod will be accessible by people who do not have an account. This can be changed later via the webadmin.",
-                    "fr": "Si cette case est cochée, Castopod sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
+                    "en": "If enabled, mautic will be accessible by people who do not have an account. This can be changed later via the webadmin.",
+                    "fr": "Si cette case est cochée, mautic sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
                 },
                 "default": true
             }
