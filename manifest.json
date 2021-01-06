@@ -39,8 +39,8 @@
                     "en": "Choose a path for mautic",
                     "fr": "Choisissez un chemin pour mautic"
                 },
-                "example": "/",
-                "default": "/"
+                "example": "/mautic",
+                "default": "/mautic"
             },
             {
                 "name": "is_public",
