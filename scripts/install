@@ -99,25 +99,25 @@ phpversion=$(ynh_app_setting_get --app=$app --key=phpversion)
 
 # Set permissions to app files
 chown -R $app: $final_path
-chmod -R 755 $final_path
+chmod -R 775 $final_path
 
-#=================================================
-# SETUP APPLICATION WITH CURL
-#=================================================
+# #=================================================
+# # SETUP APPLICATION WITH CURL
+# #=================================================
 
-# Set the app as temporarily public for cURL call
-ynh_permission_update --permission "main" --add "visitors"
+# # Set the app as temporarily public for cURL call
+# ynh_permission_update --permission "main" --add "visitors"
 
-# Reload NGINX
-ynh_systemd_action --service_name=nginx --action=reload
+# # Reload NGINX
+# ynh_systemd_action --service_name=nginx --action=reload
 
-ynh_script_progression --message="Finalizing installation..." --weight=10
+# ynh_script_progression --message="Finalizing installation..." --weight=10
 
-# Installation with cURL
-installUrl="//index.php/installer"
+# # Installation with cURL
+# installUrl="//index.php/installer"
 
-ynh_local_curl $installUrl 
-ynh_local_curl $installUrl/step/1 "install_doctrine_step_host=localhost" "install_doctrine_step_name=$db_user" "install_doctrine_step_password=$db_pwd" "install_doctrine_step_user=$db_name"
+# ynh_local_curl $installUrl 
+# ynh_local_curl $installUrl/step/1 "install_doctrine_step_host=localhost" "install_doctrine_step_name=$db_user" "install_doctrine_step_password=$db_pwd" "install_doctrine_step_user=$db_name"
 
 #=================================================
 # SETUP SSOWAT
@@ -154,7 +154,7 @@ Database login:    $app
 Database name:     $app
 Database password: $db_pwd
 
-If you are facing any problem or want to improve this app, please open a new issue here: https://github.com/YunoHost-Apps/matomo_ynh/issues"
+If you are facing any problem or want to improve this app, please open a new issue here: https://github.com/YunoHost-Apps/mautic_ynh/issues"
 
 ynh_send_readme_to_admin "$message"
 
