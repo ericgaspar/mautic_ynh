@@ -23,8 +23,8 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Configuration
 
- * Go to `domain.ltd/cp-install` to creat an admin user.
- * How to configure this app: From an admin panel `domain.ltd/cp-admin`.
+ * After installation you will receive an email with the DB password.
+ * To login to Mautic `https://example.com/mautic/s/login`.
 
 ## Documentation
 

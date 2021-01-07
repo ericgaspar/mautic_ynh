@@ -23,8 +23,8 @@ Castopod Server est une plate-forme d'hébergement open source conçue pour les 
 
 ## Configuration
 
- * Allez dans `domain.ltd/cp-install` pour créer un utilisateur administrateur.
- * Comment configurer cette application : via le panneau d'administration `domain.ltd/cp-admin`.
+ * Après l'installation, vous recevrez un e-mail avec le mot de passe DB.
+ * Pour se connecter à Mautic `https://example.com/mautic/s/login`.
 
 ## Documentation
 
