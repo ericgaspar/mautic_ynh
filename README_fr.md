@@ -15,11 +15,11 @@ Castopod Server est une plate-forme d'hébergement open source conçue pour les 
 
 ## Captures d'écran
 
-![](https://podlibre.org/content/images/2020/12/Parisian-Podcast.png)
+![](mautic-Screenshots.jpg)
 
 ## Démo
 
- * [podcast.podlibre.org](https://podcast.podlibre.org/@podlibre_fr)
+ * [Démo]()
 
 ## Configuration
 
@@ -28,7 +28,7 @@ Castopod Server est une plate-forme d'hébergement open source conçue pour les 
 
 ## Documentation
 
- * Documentation : https://podlibre.org/create-a-podcast-in-3mn-with-castopod/
+ * Documentation : https://docs.mautic.org/en
  * Documentation YunoHost : Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
 
 ## Caractéristiques spécifiques YunoHost

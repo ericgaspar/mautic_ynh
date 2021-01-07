@@ -15,7 +15,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Screenshots
 
-![]()
+![](mautic-Screenshots.jpg)
 
 ## Demo
 
@@ -28,7 +28,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Documentation
 
- * Documentation: 
+ * Documentation: https://docs.mautic.org/en
  * YunoHost documentation: If specific documentation is needed, feel free to contribute.
 
 ## YunoHost specific features
