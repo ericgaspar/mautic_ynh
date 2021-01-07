@@ -51,9 +51,6 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 * Other info you would like to add about this app.
 
-**More info on the documentation page:**  
-https://yunohost.org/packaging_apps
-
 ## Links
 
  * Report a bug: https://github.com/YunoHost-Apps/mautic_ynh/issues
